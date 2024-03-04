@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import sigin from "../../assets/svg/sigin.svg";
+import logo from "../../assets/svg/logo.svg";
+import logo2 from "../../assets/svg/forgotpassword.svg";
+import styles from "./register.module.css";
 
 const Signin = () => {
   const [forgetPassword, setForgetPassword] = useState(false);
@@ -18,9 +21,11 @@ const Signin = () => {
       {forgetPassword ? (
         <ForgetPassword />
       ) : (
-        <div className="container bg-white position-absolute  top-50 start-50 translate-middle d-flex p-2 rounded w-60 min-vh-80 border">
+        <div
+          className={`container bg-white position-absolute  top-50 start-50 translate-middle d-flex p-2 rounded w-60 min-vh-80 border ${styles.siginWrapper}`}
+        >
           <div className="container bg-primary w-50 d-flex flex-column justify-content-start align-items-start  p-5 gap-4 rounded">
-            <img src="/logo.svg" alt="" srcset="" />
+            <img src={logo} alt="" srcset="" />
             <div>
               <h1>Welcome Back</h1>
               <p>
@@ -96,7 +101,9 @@ function ForgetPassword() {
   const navigate = useNavigate();
 
   return (
-    <div className="container bg-white position-absolute  top-50 start-50 translate-middle d-flex p-2 rounded w-100 min-vh-80 border text-black">
+    <div
+      className={`container bg-white position-absolute  top-50 start-50 translate-middle d-flex p-2 rounded   border text-black  ${styles.siginWrapper}`}
+    >
       <div className="d-flex flex-column justify-content-between align-items-start p-4 gap-3 w-100">
         <button
           className="btn btn-secondary"
@@ -105,11 +112,11 @@ function ForgetPassword() {
           Go Back
         </button>
         <section className="d-flex flex-column justify-content-center align-items-center gap-3 mb-5 w-100 ">
-          <img src="/forgotpassword.svg" alt="" />
+          <img src={logo2} alt="" />
           <h1>Forget Password ?</h1>
           {email ? (
             <>
-              <p>
+              <p className={styles.forgotPasswordPara}>
                 Don't worry! Resetting your password is simple. Just type in the
                 email you registered to Record.
               </p>
