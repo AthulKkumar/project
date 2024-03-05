@@ -10,10 +10,13 @@ import styles from "./navigation.module.css";
 const NavigationLayout = () => {
   const path = useLocation();
   return (
-    <div className="d-flex ">
+    <div className="d-flex min-vh-100">
       <nav
-        className="d-flex flex-column justify-content-around align-items-start min-vh-100 p-3 "
-        style={{ background: "rgba(251, 251, 251, 1)" }}
+        className="d-flex flex-column justify-content-around align-items-start p-3 "
+        style={{
+          background: "rgba(251, 251, 251, 1)",
+          position: "sticky",
+        }}
       >
         <section>
           <ul
@@ -63,8 +66,8 @@ const NavigationLayout = () => {
           </ul>
         </section>
       </nav>
-      <div className="bg-secondary w-100 p-4">
-        <section className="d-flex justify-content-between align-items-center w-100">
+      <div className=" w-100 p-4">
+        <section className="d-flex justify-content-between align-items-center w-100 mb-4">
           <div class="input-group mb-3 w-25">
             <span class="input-group-text" id="basic-addon1">
               <i class="bi bi-search"></i>
