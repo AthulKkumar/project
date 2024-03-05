@@ -9,22 +9,22 @@ const navigationRoutes = [
   {
     name: "DashBoard",
     path: "/dashboard",
-    component: DashBoard,
+    component: <DashBoard />,
   },
   {
     name: "Learning",
     path: "/learning",
-    component: Learning,
+    component: <Learning />,
   },
   {
     name: "Tools",
     path: "/tools",
-    component: Tools,
+    component: <Tools />,
   },
   {
     name: "Profile",
     path: "/profile",
-    component: Profile,
+    component: <Profile />,
   },
 ];
 

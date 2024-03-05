@@ -8,16 +8,16 @@ export default [
   {
     name: "Register",
     path: "/register",
-    conponent: Signin,
+    component: Signin,
   },
   {
     name: "Onboarding",
     path: "/onboarding",
-    conponent: Onboarding,
+    component: Onboarding,
   },
   {
     name: "Walkthrough",
     path: "/walktrough",
-    conponent: Walktrough,
+    component: Walktrough,
   },
 ];
