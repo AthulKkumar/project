@@ -4,6 +4,7 @@ import navigationConstants from "../../constants/navigation.constant";
 import gift from "../../assets/svg/gift.svg";
 import settings from "../../assets/svg/settings.svg";
 import help from "../../assets/svg/help.svg";
+import dashBoardlogo from "../../assets/svg/dashBoardlogo.svg";
 import styles from "./navigation.module.css";
 
 const NavigationLayout = () => {
@@ -19,6 +20,7 @@ const NavigationLayout = () => {
             className="d-flex flex-column gap-3"
             style={{ color: "rgba(143, 143, 143, 1)" }}
           >
+            <img src={dashBoardlogo} alt="logo" className="mb-4" />
             {navigationConstants.map((item, index) => {
               return (
                 <li
@@ -61,7 +63,38 @@ const NavigationLayout = () => {
           </ul>
         </section>
       </nav>
-      <div>
+      <div className="bg-secondary w-100 p-4">
+        <section className="d-flex justify-content-between align-items-center w-100">
+          <div class="input-group mb-3 w-25">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="bi bi-search"></i>
+            </span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <div className="d-flex justify-content-center align-items-center gap-4">
+            <button
+              className="btn d-flex justify-content-center align-items-center"
+              style={{
+                backgroundColor: "rgba(235, 124, 73, 1)rgba(240, 79, 82, 1)",
+                color: "white",
+              }}
+            >
+              <i class="bi bi-plus"></i>
+            </button>
+            <i class="bi bi-bell-fill"></i>
+            <img
+              src="https://randomuser.me/api/portraits/thumb/men/75.jpg"
+              alt=""
+              className="rounded-circle"
+            />
+          </div>
+        </section>
         <Outlet />
       </div>
     </div>
