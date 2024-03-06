@@ -6,8 +6,27 @@ import settings from "../../assets/svg/settings.svg";
 import help from "../../assets/svg/help.svg";
 import dashBoardlogo from "../../assets/svg/dashBoardlogo.svg";
 import styles from "./navigation.module.css";
+import plusIcon from "../../assets/svg/plusIcon.svg";
+import notificationIcon from "../../assets/svg/notification.svg";
 
 const NavigationLayout = () => {
+  const notification = false;
+  const dropdown = [
+    { name: "Add New Learning" },
+    {
+      name: "Add Education",
+    },
+    {
+      name: "Add Experience",
+    },
+    {
+      name: "Add Credintials",
+    },
+    { name: "Add Project" },
+    {
+      name: "Add Activity",
+    },
+  ];
   const path = useLocation();
   return (
     <div className="d-flex min-vh-100">
@@ -16,6 +35,9 @@ const NavigationLayout = () => {
         style={{
           background: "rgba(251, 251, 251, 1)",
           position: "sticky",
+          top: 0,
+          height: "100vh",
+          overflowY: "auto",
         }}
       >
         <section>
@@ -81,16 +103,70 @@ const NavigationLayout = () => {
             />
           </div>
           <div className="d-flex justify-content-center align-items-center gap-4">
-            <button
-              className="btn d-flex justify-content-center align-items-center"
-              style={{
-                backgroundColor: "rgba(235, 124, 73, 1)rgba(240, 79, 82, 1)",
-                color: "white",
-              }}
-            >
-              <i class="bi bi-plus"></i>
-            </button>
-            <i class="bi bi-bell-fill"></i>
+            <div className="dropdown">
+              <button
+                className="btn d-flex justify-content-center align-items-center "
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style={{
+                  backgroundColor: "rgba(235, 124, 73, 1)rgba(240, 79, 82, 1)",
+                  color: "white",
+                }}
+              >
+                <i class="bi bi-plus"></i>
+              </button>
+              <ul class="dropdown-menu">
+                {dropdown.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <a class="dropdown-item" href="#">
+                        <img
+                          src={plusIcon}
+                          alt=""
+                          srcset=""
+                          style={{ width: "1vw", marginRight: "0.5vw" }}
+                        />
+                        {item.name}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <i
+                class="bi bi-bell-fill "
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              ></i>
+              <ul
+                class="dropdown-menu "
+                style={{
+                  minHeight: "50vh",
+                  minWidth: "15vw",
+                }}
+              >
+                <div className="p-2">
+                  <h6>Notifications</h6>
+                </div>
+                {notification ? (
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                ) : (
+                  <div className="d-flex flex-column justify-content-center align-items-center p-2">
+                    <img src={notificationIcon} alt="" srcset="" />
+                    <p className="text-center">
+                      Oh! There is no notifications at the moment.
+                    </p>
+                  </div>
+                )}
+              </ul>
+            </div>
+
             <img
               src="https://randomuser.me/api/portraits/thumb/men/75.jpg"
               alt=""
