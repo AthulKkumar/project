@@ -35,13 +35,50 @@ const Profile = () => {
           }}
           className="d-flex flex-column gap-4 pt-4 "
         >
-          <li>Basic Profile</li>
-          <li>Education</li>
-          <li>Work Experience</li>
-          <li>Licenses & Certifications</li>
-          <li>Skill Repository</li>
-          <li>Projects</li>
-          <li>other activities</li>
+
+          <li
+            style={{ cursor: "pointer" }}
+            onClick={() => setProfileType("basic")}
+          >
+            Basic Profile
+          </li>
+          <li
+            style={{ cursor: "pointer" }}
+            onClick={() => setProfileType("education")}
+          >
+            Education
+          </li>
+          <li
+            style={{ cursor: "pointer" }}
+            onClick={() => setProfileType("work")}
+          >
+            Work Experience
+          </li>
+          <li
+            style={{ cursor: "pointer" }}
+            onClick={() => setProfileType("license")}
+          >
+            Licenses & Certifications
+          </li>
+          <li
+            style={{ cursor: "pointer" }}
+            onClick={() => setProfileType("skill")}
+          >
+            Skill Repository
+          </li>
+          <li
+            style={{ cursor: "pointer" }}
+            onClick={() => setProfileType("project")}
+          >
+            Projects
+          </li>
+          <li
+            style={{ cursor: "pointer" }}
+            onClick={() => setProfileType("other")}
+          >
+            other activities
+          </li>
+
         </ul>
       </div>
       <div className="col col-8 px-4">
