@@ -217,7 +217,16 @@ const BasicProfile = () => {
             </button>
           </div>
           <div className="col-6 d-flex justify-content-end align-items-start">
-            <button className="btn btn-primary">Save</button>
+            <button
+              className="btn btn-primary"
+              style={{
+                background:
+                  "linear-gradient(180deg, #EB7C49 -0.55%, #F04F52 121.03%)",
+                border: "none",
+              }}
+            >
+              Save
+            </button>
           </div>
         </div>
       </form>
