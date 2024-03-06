@@ -35,6 +35,7 @@ const Profile = () => {
           }}
           className="d-flex flex-column gap-4 pt-4 "
         >
+
           <li
             style={{ cursor: "pointer" }}
             onClick={() => setProfileType("basic")}
@@ -77,6 +78,7 @@ const Profile = () => {
           >
             other activities
           </li>
+
         </ul>
       </div>
       <div className="col col-8 px-4">

@@ -1,6 +1,7 @@
 import tickWhite from "../assets/svg/tickWhite.svg";
 import plus from "../assets/svg/plus.svg";
 import edit from "../assets/svg/editIcon.svg";
+
 import greentick from "../assets/svg/greenTick.svg";
 import instagram from "../assets/svg/instagram.svg";
 import x from "../assets/svg/x.svg";
@@ -21,6 +22,7 @@ const BasicProfile = () => {
     summary: "",
   });
   //   console.log(data.fullname);
+
   return (
     <div>
       <div className="row " style={{ paddingInlineEnd: "0" }}>
@@ -37,11 +39,13 @@ const BasicProfile = () => {
             maxWidth: "250px",
           }}
         >
+
           DigiLocker Connected
           {!digiLocker && <img src={plus} alt="add" width={20} height={20} />}
           {digiLocker && (
             <img src={tickWhite} alt="verified" width={20} height={20} />
           )}
+
         </button>
       </div>
       <form
@@ -49,6 +53,7 @@ const BasicProfile = () => {
         style={{ color: "#8F8F8F", fontSize: "18px" }}
       >
         <div className="form-row d-flex gap-4 ">
+
           {/* fullname */}
 
           <div
@@ -65,6 +70,7 @@ const BasicProfile = () => {
                 color: "#858585",
                 fontSize: "18px",
               }}
+
               onClick={() => {
                 setEditMode(true);
               }}
@@ -105,6 +111,7 @@ const BasicProfile = () => {
 
           {/* username */}
 
+
           <div
             className="form-group col-6 "
             style={{ position: "relative", zIndex: 1 }}
@@ -118,6 +125,7 @@ const BasicProfile = () => {
                 color: "#858585",
                 fontSize: "18px",
               }}
+
               onClick={() => {
                 setEditMode(true);
               }}
@@ -165,6 +173,7 @@ const BasicProfile = () => {
             className="form-group col-6"
             style={{ position: "relative", zIndex: "1" }}
           >
+
             <label htmlFor="date">Date</label>
             <input
               type="Date"
@@ -175,6 +184,7 @@ const BasicProfile = () => {
                 color: "#858585",
                 fontSize: "18px",
               }}
+
               value={data.date}
               onChange={(e) => {
                 setData({ ...data, date: e.target.value });
@@ -206,6 +216,7 @@ const BasicProfile = () => {
             className="form-group col-6 "
             style={{ position: "relative", zIndex: 1 }}
           >
+
             <label htmlFor="gender">Gender</label>
             <select
               className="form-control"
@@ -215,6 +226,7 @@ const BasicProfile = () => {
                 color: "#858585",
                 fontSize: "18px",
               }}
+
               value={data.gender}
               onChange={(e) => {
                 setData({ ...data, gender: e.target.value });
@@ -222,10 +234,12 @@ const BasicProfile = () => {
               onClick={() => {
                 setEditMode(true);
               }}
+
             >
               <option>Male</option>
               <option>Female</option>
             </select>
+
             <span>
               {!editMode && data.gender && (
                 <img
@@ -246,6 +260,7 @@ const BasicProfile = () => {
 
         {/* mobile */}
 
+
         <div className="form-row d-flex gap-4">
           <div
             className="form-group col-6 "
@@ -255,12 +270,15 @@ const BasicProfile = () => {
             <input
               type="tel"
               className="form-control  "
+
               id="phone"
+
               style={{
                 backgroundColor: "#F3F3F3",
                 color: "#858585",
                 fontSize: "18px",
               }}
+
               value={data.phone}
               onChange={(e) => {
                 setData({ ...data, phone: e.target.value });
@@ -296,13 +314,16 @@ const BasicProfile = () => {
                   }}
                 />
               )}
+
             </span>
           </div>
           <div
             className="form-group col-6"
             style={{ position: "relative", zIndex: 1 }}
           >
+
             {/* email */}
+
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -313,6 +334,7 @@ const BasicProfile = () => {
                 fontSize: "18px",
               }}
               id="email"
+
               value={data.email}
               onChange={(e) => {
                 setData({ ...data, email: e.target.value });
@@ -345,14 +367,17 @@ const BasicProfile = () => {
                   }}
                 />
               )}
+
             </span>
           </div>
         </div>
+
 
         {/* Summary */}
 
         <div className="form-row " style={{ width: "100%" }}>
           <div className="form-group  " style={{ position: "relative" }}>
+
             <label htmlFor="summary">Summary</label>
             <textarea
               className="form-control  "
@@ -365,6 +390,7 @@ const BasicProfile = () => {
                 minHeight: "150px",
               }}
               placeholder="You can generate a profile summary using AI from your experiences. Add Experiences like works and other accomplishments to activate this field."
+
               value={data.summary}
               onChange={(e) => {
                 setData({ ...data, summary: e.target.value });
@@ -466,6 +492,7 @@ const BasicProfile = () => {
                 Save
               </button>
             )}
+
           </div>
         </div>
       </form>
