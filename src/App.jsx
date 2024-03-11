@@ -85,7 +85,6 @@ function App() {
               );
             })}
           </Route>
-          <Route path="/learning-content" element={<LearningContent />} />
         </Routes>
       </BrowserRouter>
     </>

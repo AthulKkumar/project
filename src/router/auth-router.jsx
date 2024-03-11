@@ -1,4 +1,5 @@
 import { lazy } from "react";
+import LearningContent from "../pages/LearningContent/LearningContent";
 
 const DashBoard = lazy(() => import("../pages/DashBoardPage/index"));
 const Learning = lazy(() => import("../pages/LearningPage/index"));
@@ -26,6 +27,11 @@ const navigationRoutes = [
     path: "/profile",
     component: <Profile />,
   },
+  {
+    name: "LearningContent",
+    path:"/learning-content",
+    component: <LearningContent />
+  }
 ];
 
 export default navigationRoutes;
