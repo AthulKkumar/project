@@ -2,10 +2,15 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./dashboard.css";
+import { CiSearch } from "react-icons/ci";
 import {
   IoMdArrowForward,
+  IoMdAdd,
   IoIosArrowForward,
+  IoIosAdd,
 } from "react-icons/io";
+import { FaBell } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
 import { FaMedal } from "react-icons/fa";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import ProgressCard from "../../components/progressCard/ProgressCard";
@@ -16,13 +21,34 @@ import linkedin from "../../assets/Linkedin.png";
 import coursera from "../../assets/Coursera.png";
 import udemy from "../../assets/Udemy.png";
 import calender from "../../assets/calender.png";
+import DashboardNotification from "../../components/dashboardNotification/DashBoardNotification";
 
 const DashBoard = () => {
+  const [show, setShow] = useState(false);
+  const [notification, setNotification] = useState(false);
+
+  const handleClick = () => {
+    setShow(true);
+    if (show == true) {
+      setShow(false);
+    }
+  };
+
+  const notificationShow = () => {
+    setNotification(true);
+    if (notification == true) {
+      setNotification(false);
+    }
+  };
 
   return (
     <div className="dashboard__wrapper">
       <div className="dashboard__section1">
         <div className="dashboard__container1">
+          {/* <div className="dashboard__input">
+            <CiSearch />
+            <input type="text" placeholder="search..." />
+          </div> */}
           <div className="dashboard__header">
             <h1>Welcome back, Name!</h1>
             <p>You can now your YouTube Playlists into Courses</p>
@@ -88,6 +114,52 @@ const DashBoard = () => {
 
       <div className="dashboard__seciton2">
         <div className="dashboard__section2_warpper">
+          {/* <div className="dashboard__section2_header">
+            <IoMdAdd
+              fontSize={30}
+              className="dashboard__section2__add"
+              onClick={handleClick}
+            />
+            <FaBell fontSize={30} onClick={notificationShow} />
+            <CgProfile fontSize={30} />
+          </div>
+
+          {show && (
+            <div className="dashboard__section2_popover">
+              <ul>
+                <li>
+                  <IoIosAdd className="dashboard__section2_popover_svg" />
+                  Add New Learnings
+                </li>
+                <li>
+                  <IoIosAdd className="dashboard__section2_popover_svg" />
+                  Add Education
+                </li>
+                <li>
+                  <IoIosAdd className="dashboard__section2_popover_svg" />
+                  Add Experience
+                </li>
+                <li>
+                  <IoIosAdd className="dashboard__section2_popover_svg" />
+                  Add Credentials
+                </li>
+                <li>
+                  <IoIosAdd className="dashboard__section2_popover_svg" />
+                  Add Project
+                </li>
+                <li>
+                  <IoIosAdd className="dashboard__section2_popover_svg" />
+                  Add Activity
+                </li>
+              </ul>
+            </div>
+          )}
+
+          {notification && (
+            <div className="dashboardToogleNotification">
+              <DashboardNotification />{" "}
+            </div>
+          )} */}
 
           <div className="dashboard__section2__skill">
             <h4>Skill Badges</h4>
