@@ -3,6 +3,7 @@
   padding: 10px;
   border-radius: 10px;
   display: flex;
+  margin: 10px;
 }
 
 .pipelineCard__img {

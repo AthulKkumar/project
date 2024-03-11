@@ -18,6 +18,7 @@ import navigationRoutes from "./router/auth-router";
 import { Suspense } from "react";
 import nonAuthRoutes from "./router/non-auth-routes";
 import SuspenseLayout from "./layouts/SuspenseLayout";
+import LearningContent from "./pages/LearningContent/LearningContent";
 
 function App() {
   // const router = createBrowserRouter([
@@ -84,6 +85,7 @@ function App() {
               );
             })}
           </Route>
+          <Route path="/learning-content" element={<LearningContent />} />
         </Routes>
       </BrowserRouter>
     </>
