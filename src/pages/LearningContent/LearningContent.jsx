@@ -1,6 +1,5 @@
 import React from "react";
 import "./learningContent.css";
-import Navbar from "../../components/navbar/Navbar";
 import { IoIosArrowBack, IoIosArrowDown, IoMdAdd } from "react-icons/io";
 import { FaPlay } from "react-icons/fa";
 import LearningContentCard from "../../components/learningContentCard/LearningContentCard";
@@ -10,7 +9,6 @@ const LearningContent = () => {
   return (
     <div className="learningContent">
       <div className="learningContent__navbar">
-        <Navbar />
       </div>
       <div className="learningContent__wrapper">
         <div className="learningContent__section">
