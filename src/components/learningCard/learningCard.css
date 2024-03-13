@@ -25,6 +25,7 @@
 
 .learningCard__progress_per {
   display: flex;
+  width: 600px;
 }
 
 .learningCard__progress_per p {
@@ -40,14 +41,15 @@
   outline: none;
   background-color: blue;
   color: white;
-  width: 200px;
-  height: 25px;
+  width: fit-content;
+  height: 30px;
   border-radius: 5px;
   margin-left: 20px;
 }
 
 .learningCard__button {
   display: flex;
+  justify-content: space-between;
 }
 
 .learningCard__button {

@@ -8,7 +8,6 @@ import LearningContentSection from "../../components/learningContentSection2/Lea
 const LearningContent = () => {
   return (
     <div className="learningContent">
-      <div className="learningContent__navbar"></div>
       <div className="learningContent__wrapper">
         <div className="learningContent__section">
           <div className="learningContent__container1">

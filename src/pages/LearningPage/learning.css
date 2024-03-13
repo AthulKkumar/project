@@ -60,8 +60,17 @@
 }
 
 .searning__section2_goal {
+  display: flex;
   margin-left: 20px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
+
+.searning__section2_goal svg {
+  color: gray;
+}
+
 .searning__section2_goal h4 {
   font-weight: bold;
 }

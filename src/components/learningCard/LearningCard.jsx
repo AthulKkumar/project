@@ -4,7 +4,7 @@ import thumbnail from "../../assets/thumbnail.webp";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-const LearningCard = () => {
+const LearningCard = ({val}) => {
   return (
     <div className="learningCard">
       <div className="learningCard__wrapper">
@@ -19,10 +19,10 @@ const LearningCard = () => {
           <div className="learningCard__progress">
             <p>Progress</p>
             <div className="learningCard__progress_per">
-              <progress value="70" max="100">
-                70 %
+              <progress value={val} max="100">
+                {val}
               </progress>
-              <p>70%</p>
+              <p>{val}%</p>
             </div>
           </div>
           <div className="learningCard__button">

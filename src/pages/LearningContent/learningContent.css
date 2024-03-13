@@ -8,7 +8,7 @@
 }
 
 .learningContent__section {
-  width: 1150px;
+  width: 100%;
 }
 
 .learningContent__container1 {
@@ -27,7 +27,7 @@
 
 .learningContent__video {
   background: url("../../assets/videoThumbnail.jpg");
-  width: 1150px;
+  width: 1000px;
   height: 500px;
   background-size: cover;
   background-position: center;

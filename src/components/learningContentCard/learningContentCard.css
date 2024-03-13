@@ -22,8 +22,14 @@
   padding: 20px;
   border-radius: 10px;
   border: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
 }
 
 .learningContentCard__p p {
   margin: 0;
+}
+
+.learningContentCard__p div svg{
+  color: gray;
 }
