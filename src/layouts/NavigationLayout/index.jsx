@@ -31,13 +31,14 @@ const NavigationLayout = () => {
   return (
     <div className="d-flex min-vh-100">
       <nav
-        className="d-flex flex-column justify-content-around align-items-start p-3 "
+        className="d-flex flex-column justify-content-between align-items-baseline p-3 "
         style={{
           background: "rgba(251, 251, 251, 1)",
           position: "sticky",
           top: 0,
           height: "100vh",
           overflowY: "auto",
+          width: "22vw",
         }}
       >
         <section>
@@ -68,14 +69,19 @@ const NavigationLayout = () => {
             })}
           </ul>
         </section>
-        <section className="d-flex flex-column bg-white p-3">
-          <div className="d-flex justify-content-center align-items-center gap-3">
-            <img src={gift} alt="" srcset="" />
-            <p className="fw-semibold">Free Gifts awaits You!</p>
-          </div>
-          <Link>Explore More Fetures</Link>
-        </section>
+
         <section>
+          <section
+            className="d-flex flex-column bg-white p-3"
+            style={{ width: "max-content" }}
+          >
+            <div className="d-flex justify-content-center align-items-center gap-3">
+              <img src={gift} alt="" srcset="" />
+              <p className="fw-semibold">Free Gifts awaits You!</p>
+            </div>
+            <Link>Explore More Fetures</Link>
+          </section>
+
           <ul className="d-flex flex-column gap-3">
             <li className="d-flex gap-3">
               <img src={help} alt="help" srcset="" />

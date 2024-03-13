@@ -8,7 +8,10 @@ import styles from "./register.module.css";
 const Signin = () => {
   const [forgetPassword, setForgetPassword] = useState(false);
   return (
-    <div className="container-fluid min-vh-100 d-flex text-light ">
+    <div
+      className="container-fluid min-vh-100 d-flex text-light "
+      style={{ padding: "0" }}
+    >
       <div className="container-fluid  w-100  min-vh-100  "></div>
       <div
         className="container-fluid  min-vh-100 "
@@ -22,7 +25,8 @@ const Signin = () => {
         <ForgetPassword />
       ) : (
         <div
-          className={`container bg-white position-absolute  top-50 start-50 translate-middle d-flex p-2 rounded w-60 min-vh-80 border ${styles.siginWrapper}`}
+          className={`container bg-white position-absolute  top-50 start-50 translate-middle d-flex p-2 rounded min-vh-80 border `}
+          style={{ width: "max-content" }}
         >
           <div className="container bg-primary w-50 d-flex flex-column justify-content-start align-items-start  p-5 gap-4 rounded">
             <img src={logo} alt="" srcset="" />
@@ -102,7 +106,8 @@ function ForgetPassword() {
 
   return (
     <div
-      className={`container bg-white position-absolute  top-50 start-50 translate-middle d-flex p-2 rounded   border text-black  ${styles.siginWrapper}`}
+      className={`container bg-white position-absolute  top-50 start-50 translate-middle d-flex p-2 rounded   border text-black `}
+      style={{ width: " -webkit-fill-available" }}
     >
       <div className="d-flex flex-column justify-content-between align-items-start p-4 gap-3 w-100">
         <button
@@ -120,7 +125,7 @@ function ForgetPassword() {
                 Don't worry! Resetting your password is simple. Just type in the
                 email you registered to Record.
               </p>
-              <section className="d-flex flex-column justify-content-center align-items-strech w-25">
+              <section className="d-flex flex-column justify-content-center align-items-strech w-50">
                 <div className="mb-3">
                   <input
                     type="email"
@@ -142,13 +147,13 @@ function ForgetPassword() {
           ) : (
             <>
               <p>Great, password reset link has been sent to your email.</p>
-              <section className="d-flex flex-column justify-content-center align-items-strech w-25">
+              <section className="d-flex flex-column justify-content-center align-items-strech w-50">
                 <button
                   type="button"
                   className="btn btn-primary"
                   onClick={() => navigate("/register")}
                 >
-                  Sign In
+                  Sign In Now
                 </button>
               </section>
             </>

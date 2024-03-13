@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "./dashboard.css";
-import {
-  IoMdArrowForward,
-  IoIosArrowForward,
-} from "react-icons/io";
+import { IoMdArrowForward, IoIosArrowForward } from "react-icons/io";
 import { FaMedal } from "react-icons/fa";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import ProgressCard from "../../components/progressCard/ProgressCard";
@@ -18,7 +15,6 @@ import udemy from "../../assets/Udemy.png";
 import calender from "../../assets/calender.png";
 
 const DashBoard = () => {
-
   return (
     <div className="dashboard__wrapper">
       <div className="dashboard__section1">
@@ -88,7 +84,6 @@ const DashBoard = () => {
 
       <div className="dashboard__seciton2">
         <div className="dashboard__section2_warpper">
-
           <div className="dashboard__section2__skill">
             <h4>Skill Badges</h4>
             <div className="dashboard__seciton2_role_wrapper">

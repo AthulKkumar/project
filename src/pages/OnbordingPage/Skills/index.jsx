@@ -83,11 +83,11 @@ const Walktrough = () => {
   return (
     <div className="d-flex min-vh-100">
       <div className="p-4 gap-3 ">
-        <button className="btn btn-secondary mb-3 d-flex gap-2">
-          <Link to="/onboarding">
+        <Link to="/onboarding">
+          <button className="btn btn-secondary mb-3 d-flex gap-2">
             <i class="bi bi-caret-left"></i>Go Back
-          </Link>
-        </button>
+          </button>
+        </Link>
         <section className="d-flex flex-column gap-3 mt-5">
           <h5 style={{ color: "rgba(235, 124, 73, 1)rgba(240, 79, 82, 1)" }}>
             Let's Build your profile

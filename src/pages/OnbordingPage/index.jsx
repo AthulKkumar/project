@@ -22,9 +22,9 @@ const Onboarding = () => {
         <img src={onboarding} alt="" srcset="" />
       </section>
       <section className="w-100 d-flex justify-content-end">
-        <button className="btn btn-primary p-2">
-          <Link to="/walktrough">Get Started</Link>
-        </button>
+        <Link to="/walktrough">
+          <button className="btn btn-primary p-2">Get Started</button>
+        </Link>
       </section>
     </div>
   );
