@@ -1,4 +1,6 @@
 import React from "react";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import navigationConstants from "../../constants/navigation.constant";
 import gift from "../../assets/svg/gift.svg";
@@ -121,7 +123,7 @@ const NavigationLayout = () => {
               >
                 <i class="bi bi-plus"></i>
               </button>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu ">
                 {dropdown.map((item, index) => {
                   return (
                     <li key={index}>

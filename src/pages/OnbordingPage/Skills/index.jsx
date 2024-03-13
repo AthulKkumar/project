@@ -1,68 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import walktrough from "../../../assets/svg/walktrough.svg";
-const Walktrough = () => {
-  const sections = [
-    {
-      title: "Development & Tech",
-      items: [
-        { name: "React Js", img: "/react.png" },
-        { name: "Node Js", img: "/react.png" },
-        { name: "Mongo DB", img: "/react.png" },
-        { name: "Express", img: "/react.png" },
-      ],
-    },
-    {
-      title: "Design",
-      items: [
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-      ],
-    },
-    {
-      title: "Vedio Editing",
-      items: [
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-      ],
-    },
-    {
-      title: "Product",
-      items: [
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-        { name: "React Js", img: "/react.png" },
-      ],
-    },
-  ];
+import sectionsAndSkills from "../../../constants/skills.constant";
 
+const Walktrough = () => {
   const [showMore, setShowMore] = useState({});
   const [selectedSkills, setSelectedSkills] = useState([]);
+  const sections = sectionsAndSkills;
 
   const toggleShowMore = (sectionTitle) => {
     setShowMore((prevState) => ({
@@ -114,6 +58,9 @@ const Walktrough = () => {
               className="input-group input-group-sm mb-3  w-50  "
               style={{ height: "5vh" }}
             >
+              <span className="input-group-text" id="inputGroup-sizing-sm">
+                <i class="bi bi-search"></i>
+              </span>
               <input
                 type="text"
                 className="form-control"
@@ -121,9 +68,6 @@ const Walktrough = () => {
                 aria-describedby="inputGroup-sizing-sm"
                 placeholder="Search for skills"
               />
-              <span className="input-group-text" id="inputGroup-sizing-sm">
-                <i class="bi bi-search"></i>
-              </span>
             </div>
             <p className="d-flex gap-2 align-items-center">
               Support <i class="bi bi-info-circle"></i>
@@ -143,7 +87,7 @@ const Walktrough = () => {
                 {selectedSkills?.map((item, index) => {
                   return (
                     <div
-                      className="d-flex justify-content-around align-items-center rounded-pill pl-2 border bg-white m-3"
+                      className="d-flex justify-content-around align-items-center rounded-pill pl-2 border bg-white m-1"
                       style={{
                         paddingLeft: " 1rem",
                         paddingRight: "1rem",
@@ -155,9 +99,11 @@ const Walktrough = () => {
                         src={item.img}
                         alt={item.name}
                         srcset=""
-                        style={{ width: "5vh", height: "5vh" }}
+                        style={{ width: "20px" }}
                       />
-                      <p className="text-center mt-2 pr-2">{item.name}</p>
+                      <p className="text-center mt-2 pr-2 fw-semibold">
+                        {item.name}
+                      </p>
                     </div>
                   );
                 })}
@@ -168,17 +114,17 @@ const Walktrough = () => {
           {sections.map((section, index) => {
             return (
               <section key={index} className="mt-2">
-                <h5>{section.title}</h5>
+                <h5 style={{ padding: "0.7rem 0rem" }}>{section.title}</h5>
                 <div className="d-flex justify-content-start align-items-center flex-wrap">
                   {section.items
                     .slice(
                       0,
-                      showMore[section.title] ? section.items.length : 7
+                      showMore[section.title] ? section.items.length : 10
                     )
                     .map((item, index) => {
                       return (
                         <div
-                          className="d-flex justify-content-around align-items-center rounded-pill pl-2 border bg-white m-3"
+                          className="d-flex justify-content-around align-items-center rounded-pill pl-1 border bg-white m-1"
                           style={{
                             paddingLeft: " 1rem",
                             paddingRight: "1rem",
@@ -191,9 +137,11 @@ const Walktrough = () => {
                             src={item.img}
                             alt={item.name}
                             srcset=""
-                            style={{ width: "auto", height: "5vh" }}
+                            style={{ width: "20px" }}
                           />
-                          <p className="text-center mt-2 pr-2">{item.name}</p>
+                          <p className="text-center mt-2 pr-2 fw-semibold">
+                            {item.name}
+                          </p>
                         </div>
                       );
                     })}
